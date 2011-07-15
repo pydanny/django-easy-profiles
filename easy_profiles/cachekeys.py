@@ -1,4 +1,5 @@
 def key_profile_getprofile(user):
+    """ generates key for user-to-profile cache"""
     return "auth:models:user:getprofile:{0}".format(user.id)
 
 def key_profile_username(profile):
