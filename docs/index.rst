@@ -11,6 +11,7 @@ This is a project of all sorts of handy Django profile tricks. Not all are yet e
 .. toctree::
    :maxdepth: 2
    
+   installation
    reference
 
 Indices and tables
