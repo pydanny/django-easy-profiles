@@ -13,6 +13,12 @@ This is a project of all sorts of handy Django profile tricks. Not all are yet e
    
    installation
    reference
+   
+Similar projects worth looking at 
+=================================
+
+ * Eldarion uses the excellent Idios project for all their apps, and parts of that directly inspired this project.
+ * django-profiles.
 
 Indices and tables
 ==================

@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from easy_profiles import cachekeys
 
-class Profile(models.Model):
+class ProfileBase(models.Model):
     """ Profiles for users of all types """
     user = models.OneToOneField(User)
     first_name = models.CharField(_('first name'), max_length=30)
@@ -17,10 +17,12 @@ class Profile(models.Model):
 
     def __unicode__(self):
         return self.username
+    
+    class Meta:
+        abstract = True
 
     def save(self, **kwargs):
         """ Override save to always populate changes to auth.user model
-            TODO: Taskify this one
         """
 
         user_obj = User.objects.get(username=profile.user.username)
